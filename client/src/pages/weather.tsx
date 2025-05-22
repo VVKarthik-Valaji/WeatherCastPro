@@ -153,41 +153,40 @@ export default function Weather() {
     <div className="weather-container">
       <div className="container mx-auto px-4 py-5">
         {/* Header Section */}
-        <div className="header mb-8">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h1 className="mb-0 text-2xl font-bold flex items-center">
-                <i className="fas fa-cloud-sun me-2 text-primary"></i>
-                WeatherCast Pro
-              </h1>
-              <p className="text-muted mb-0">7-Day Weather Forecast</p>
-            </div>
-            <div className="col-md-6">
-              <div className="search-container relative max-w-md mx-auto">
-                <Input
-                  type="text"
-                  className="search-input pr-20"
-                  placeholder="Search for a city..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                />
-                <Button
-                  className="search-btn absolute right-12 top-1/2 transform -translate-y-1/2"
-                  size="sm"
-                  onClick={handleSearch}
-                >
-                  <Search className="h-4 w-4" />
-                </Button>
-                <Button
-                  className="location-btn absolute right-1 top-1/2 transform -translate-y-1/2 bg-green-500 hover:bg-green-600"
-                  size="sm"
-                  onClick={getCurrentLocation}
-                  title="Use current location"
-                >
-                  <MapPin className="h-4 w-4" />
-                </Button>
-              </div>
+        <div className="header-section mb-8">
+          <div className="text-center mb-4">
+            <h1 className="app-title">
+              <i className="fas fa-cloud-sun weather-logo"></i>
+              WeatherCast Pro
+            </h1>
+            <p className="app-subtitle">7-Day Weather Forecast</p>
+          </div>
+          
+          <div className="search-wrapper">
+            <div className="search-container">
+              <Input
+                type="text"
+                className="search-input"
+                placeholder="Search for a city..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+              />
+              <Button
+                className="search-btn"
+                size="sm"
+                onClick={handleSearch}
+              >
+                <Search className="h-3 w-3" />
+              </Button>
+              <Button
+                className="location-btn"
+                size="sm"
+                onClick={getCurrentLocation}
+                title="Use current location"
+              >
+                <MapPin className="h-3 w-3" />
+              </Button>
             </div>
           </div>
         </div>

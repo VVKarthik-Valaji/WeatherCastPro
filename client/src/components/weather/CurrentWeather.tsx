@@ -35,53 +35,68 @@ export function CurrentWeather({ weather, units, onUnitToggle, currentDate }: Cu
           <div className="col-md-8">
             <div className="d-flex align-items-center justify-content-between mb-3">
               <div>
-                <h2 className="mb-1 text-white">
+                <h2 className="mb-1 location-title">
                   {weather.name}, {weather.sys.country}
                 </h2>
-                <p className="mb-0 opacity-75 text-white">{currentDate}</p>
+                <p className="mb-0 current-date">{currentDate}</p>
               </div>
               <Button
-                className="unit-toggle bg-white/20 border-white/30 text-white hover:bg-white/30"
+                className="unit-toggle-new"
                 onClick={onUnitToggle}
               >
                 °{tempUnit === 'F' ? 'F / °C' : 'C / °F'}
               </Button>
             </div>
             <div className="d-flex align-items-center">
-              <div className="temperature-display text-6xl font-light text-white">
+              <div className="temperature-display-new">
                 {Math.round(weather.main.temp)}°{tempUnit}
               </div>
               <div className="ms-3">
-                <div className="weather-icon-large text-7xl text-white">
+                <div className="weather-icon-new">
                   <i className={weatherIcon}></i>
                 </div>
               </div>
             </div>
-            <h4 className="mb-0 text-white">
+            <h4 className="mb-0 weather-condition">
               {weather.weather[0].description
                 .split(' ')
                 .map(word => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(' ')}
             </h4>
-            <p className="opacity-75 text-white">
+            <p className="feels-like-temp">
               Feels like {Math.round(weather.main.feels_like)}°{tempUnit}
             </p>
           </div>
           <div className="col-md-4 text-end">
-            <div className="weather-details bg-transparent border-0 p-0">
-              <div className="detail-item border-0 text-white py-2">
-                <span><i className="fas fa-eye detail-icon text-white"></i>Visibility</span>
-                <strong>{visibility} {visibilityUnit}</strong>
+            <div className="current-weather-stats">
+              <div className="stat-item">
+                <div className="stat-icon">
+                  <i className="fas fa-eye"></i>
+                </div>
+                <div className="stat-content">
+                  <span className="stat-label">Visibility</span>
+                  <span className="stat-value">{visibility} {visibilityUnit}</span>
+                </div>
               </div>
-              <div className="detail-item border-0 text-white py-2">
-                <span><i className="fas fa-wind detail-icon text-white"></i>Wind</span>
-                <strong>
-                  {Math.round(weather.wind.speed)} {speedUnit} {getWindDirection(weather.wind.deg)}
-                </strong>
+              <div className="stat-item">
+                <div className="stat-icon">
+                  <i className="fas fa-wind"></i>
+                </div>
+                <div className="stat-content">
+                  <span className="stat-label">Wind</span>
+                  <span className="stat-value">
+                    {Math.round(weather.wind.speed)} {speedUnit} {getWindDirection(weather.wind.deg)}
+                  </span>
+                </div>
               </div>
-              <div className="detail-item border-0 text-white py-2">
-                <span><i className="fas fa-thermometer-half detail-icon text-white"></i>Pressure</span>
-                <strong>{weather.main.pressure} hPa</strong>
+              <div className="stat-item">
+                <div className="stat-icon">
+                  <i className="fas fa-thermometer-half"></i>
+                </div>
+                <div className="stat-content">
+                  <span className="stat-label">Pressure</span>
+                  <span className="stat-value">{weather.main.pressure} hPa</span>
+                </div>
               </div>
             </div>
           </div>

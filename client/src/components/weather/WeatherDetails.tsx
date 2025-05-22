@@ -51,17 +51,17 @@ export function WeatherDetails({ weather, airQuality, units }: WeatherDetailsPro
         </div>
         
         <div className="detail-item">
-          <span><i className="fas fa-droplet detail-icon"></i>Humidity</span>
+          <span><span className="emoji-icon humidity-emoji">💧</span>Humidity</span>
           <strong>{weather.main.humidity}%</strong>
         </div>
         
         <div className="detail-item">
-          <span><i className="fas fa-cloud detail-icon"></i>Cloud Cover</span>
+          <span><span className="emoji-icon cloud-emoji">☁️</span>Cloud Cover</span>
           <strong>{weather.clouds.all}%</strong>
         </div>
         
         <div className="detail-item">
-          <span><i className="fas fa-eye detail-icon"></i>UV Index</span>
+          <span><span className="emoji-icon uv-emoji">☀️</span>UV Index</span>
           <strong>N/A</strong>
         </div>
       </div>
@@ -74,14 +74,14 @@ export function WeatherDetails({ weather, airQuality, units }: WeatherDetailsPro
         </h5>
         
         <div className="detail-item">
-          <span><i className="fas fa-smog detail-icon"></i>AQI</span>
+          <span><span className="emoji-icon air-quality-emoji">🌬️</span>AQI</span>
           <strong>
             {airQuality ? getAQIDescription(airQuality.list?.[0]?.main?.aqi) : 'Loading...'}
           </strong>
         </div>
         
         <div className="detail-item">
-          <span><i className="fas fa-leaf detail-icon"></i>PM2.5</span>
+          <span><span className="emoji-icon pm-emoji">🍃</span>PM2.5</span>
           <strong>
             {airQuality ? `${airQuality.list?.[0]?.components?.pm2_5?.toFixed(1) || 'N/A'} μg/m³` : 'Loading...'}
           </strong>

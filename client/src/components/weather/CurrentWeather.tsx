@@ -70,8 +70,8 @@ export function CurrentWeather({ weather, units, onUnitToggle, currentDate }: Cu
           <div className="col-md-4 text-end">
             <div className="current-weather-stats">
               <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="fas fa-eye"></i>
+                <div className="stat-emoji-icon visibility-emoji">
+                  👁️
                 </div>
                 <div className="stat-content">
                   <span className="stat-label">Visibility</span>
@@ -79,8 +79,8 @@ export function CurrentWeather({ weather, units, onUnitToggle, currentDate }: Cu
                 </div>
               </div>
               <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="fas fa-wind"></i>
+                <div className="stat-emoji-icon wind-emoji">
+                  💨
                 </div>
                 <div className="stat-content">
                   <span className="stat-label">Wind</span>
@@ -90,8 +90,8 @@ export function CurrentWeather({ weather, units, onUnitToggle, currentDate }: Cu
                 </div>
               </div>
               <div className="stat-item">
-                <div className="stat-icon">
-                  <i className="fas fa-thermometer-half"></i>
+                <div className="stat-emoji-icon pressure-emoji">
+                  🌡️
                 </div>
                 <div className="stat-content">
                   <span className="stat-label">Pressure</span>

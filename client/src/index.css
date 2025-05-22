@@ -446,6 +446,64 @@
   box-shadow: 0 3px 12px rgba(255, 107, 107, 0.3) !important;
 }
 
+.humidity-emoji {
+  background: linear-gradient(135deg, rgba(54, 162, 235, 0.2), rgba(75, 192, 192, 0.2)) !important;
+  box-shadow: 0 3px 12px rgba(54, 162, 235, 0.3) !important;
+}
+
+.cloud-emoji {
+  background: linear-gradient(135deg, rgba(201, 203, 207, 0.3), rgba(156, 163, 175, 0.3)) !important;
+  box-shadow: 0 3px 12px rgba(156, 163, 175, 0.4) !important;
+}
+
+.uv-emoji {
+  background: linear-gradient(135deg, rgba(255, 206, 84, 0.2), rgba(255, 159, 64, 0.2)) !important;
+  box-shadow: 0 3px 12px rgba(255, 206, 84, 0.3) !important;
+}
+
+.air-quality-emoji {
+  background: linear-gradient(135deg, rgba(75, 192, 192, 0.2), rgba(153, 102, 255, 0.2)) !important;
+  box-shadow: 0 3px 12px rgba(75, 192, 192, 0.3) !important;
+}
+
+.pm-emoji {
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(40, 180, 99, 0.2)) !important;
+  box-shadow: 0 3px 12px rgba(46, 204, 113, 0.3) !important;
+}
+
+.stat-emoji-icon {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.stat-emoji-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.visibility-emoji {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 152, 0, 0.2)) !important;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3) !important;
+}
+
+.wind-emoji {
+  background: linear-gradient(135deg, rgba(0, 150, 136, 0.2), rgba(76, 175, 80, 0.2)) !important;
+  box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3) !important;
+}
+
+.pressure-emoji {
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.2), rgba(156, 39, 176, 0.2)) !important;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3) !important;
+}
+
 .sunrise-icon {
   background: linear-gradient(135deg, #FFD700, #FFA500) !important;
   box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4) !important;

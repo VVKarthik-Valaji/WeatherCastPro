@@ -232,26 +232,39 @@
 .stat-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 12px 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 18px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .stat-icon {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(135deg, #667eea, #764ba2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.stat-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.5);
 }
 
 .stat-content {
@@ -261,15 +274,17 @@
 }
 
 .stat-label {
-  font-size: 12px;
-  color: #666;
-  margin-bottom: 2px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 3px;
+  font-weight: 500;
 }
 
 .stat-value {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .location-title {
@@ -354,8 +369,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.15);
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.detail-item span {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.detail-item strong {
+  font-weight: 700;
+  color: #222;
+  font-size: 16px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .detail-item:last-child {
@@ -363,10 +401,33 @@
 }
 
 .detail-icon {
-  color: #667eea;
+  color: white;
   margin-right: 10px;
-  width: 20px;
+  width: 35px;
+  height: 35px;
   font-size: 16px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.detail-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.sunrise-icon {
+  background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4) !important;
+}
+
+.sunset-icon {
+  background: linear-gradient(135deg, #FF6B6B, #4ECDC4) !important;
+  box-shadow: 0 3px 10px rgba(255, 107, 107, 0.4) !important;
 }
 
 .forecast-card {

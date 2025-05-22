@@ -41,12 +41,12 @@ export function WeatherDetails({ weather, airQuality, units }: WeatherDetailsPro
         </h5>
         
         <div className="detail-item">
-          <span><i className="fas fa-sunrise detail-icon"></i>Sunrise</span>
+          <span><i className="fas fa-sun detail-icon sunrise-icon"></i>Sunrise</span>
           <strong>{formatTime(weather.sys.sunrise)}</strong>
         </div>
         
         <div className="detail-item">
-          <span><i className="fas fa-sunset detail-icon"></i>Sunset</span>
+          <span><i className="fas fa-moon detail-icon sunset-icon"></i>Sunset</span>
           <strong>{formatTime(weather.sys.sunset)}</strong>
         </div>
         
